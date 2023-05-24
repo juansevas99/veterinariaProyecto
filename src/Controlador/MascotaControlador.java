@@ -19,7 +19,7 @@ public class MascotaControlador {
 
 	public int crearMascota(int tipo ) {
 		
-		HashMap<String, Object> solicitud=registro.deplegarFormulario();
+		HashMap<String, Object> solicitud=registro.desplegarFormulario();
 		if (tipo==1) {
 			mascota= new Perro(solicitud.get("nombre").toString(), Integer.parseInt(solicitud.get("edad").toString()), solicitud.get("especie").toString(), solicitud.get("raza").toString(), solicitud.get("genero").toString(), Float.parseFloat( solicitud.get("altura").toString()),Float.parseFloat( solicitud.get("peso").toString()), Propietario.listaPropietario.get(Propietario.listaPropietario.size()-1));
 		}
