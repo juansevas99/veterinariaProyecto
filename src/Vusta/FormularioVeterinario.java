@@ -10,7 +10,7 @@ public class FormularioVeterinario extends Formulario {
 		solicitud= new HashMap<String, Object>();
 	}
 	@Override
-	public HashMap<String, Object> deplegarFormulario() {
+	public HashMap<String, Object> desplegarFormulario() {
 		System.out.println("MODULO REGISTRO VETERINARIO");
 		System.out.println("Nombre");
 		String nombre=tc.nextLine();

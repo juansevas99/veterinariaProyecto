@@ -13,7 +13,6 @@ public class alertaClaseMascota extends Alerta {
 		 "\n");
 		 
 			
-			 
 		
 			 String choice=tc.nextLine();
 			 switch (choice) {
