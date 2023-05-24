@@ -15,22 +15,22 @@ public class FormularioRegistroPropietario extends Formulario{
 		System.out.println("Nombre");
 		String nombre=tc.nextLine();
 		solicitud.put("nombre", nombre);
-		System.out.println("Identificacion");
+		System.out.println("identificacion");
 		String identificacion=tc.nextLine();
 		solicitud.put("identificacion", identificacion);
 		
-		System.out.println("Direccion");
+		System.out.println("direccion");
 		String direccion=tc.nextLine();
-		solicitud.put("identificacion", direccion);
+		solicitud.put("direccion", direccion);
 		
 		System.out.println("Correo");
 		String correo=tc.nextLine();
-		solicitud.put("identificacion", correo);
+		solicitud.put("correo", correo);
 		
 		System.out.println("telefono");
 		
 		String telefono=tc.nextLine();
-		solicitud.put("identificacion", telefono);
+		solicitud.put("telefono", telefono);
 		
 		
 		return solicitud;

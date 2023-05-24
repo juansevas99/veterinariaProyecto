@@ -19,8 +19,8 @@ public class CitaControlador {
 	}
 	public void crearCita() {
 		Scanner tc= new Scanner(System.in);
-		
-		System.out.println("Indieque numero de indentifiacion"); // es demasiado pequeño para crear una vista 
+		System.out.println("ALERTA: VALIDACION INICIAL DE DATOS:\n");
+		System.out.println("Indique numero de indentifiacion\n"); // es demasiado pequeño para crear una vista 
 		
 		String documento=tc.nextLine();
 		if (Propietario.encontrarPorId(documento)!=null) {
@@ -28,17 +28,20 @@ public class CitaControlador {
 			
 			int identifiacion=tc.nextInt();
 			if (Mascota.encontrarPorId(identifiacion)!=null) {
-				// aqui se procede a crear la cita
+				System.out.println("Creando cita (falta logica)");
 			}
 			else {
 				int tipo=alerta.desplegarAlerta();
 				mascotaControlador.crearMascota(tipo);
+				System.out.println("Creando cita (falta logica)");
 			}
 		}
 		else {
 			propietarioControlador.crearPropietario();
 			int tipo=alerta.desplegarAlerta();
-			mascotaControlador.crearMascota(tipo);
+			mascotaControlador.crearMascota(tipo); // se crear segun el ultimo registro en propietario
+			
+			System.out.println("Creando cita (falta logica)");
 		
 		}
 		

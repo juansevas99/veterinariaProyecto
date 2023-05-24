@@ -10,7 +10,8 @@ public class MenuRegistroDatos extends Menus {
 		 System.out.println("Menu\n"+
 		 "1. Agendar Cita \n"+  // se requiere un flujo 
 		 "2. Mostrar Lista de mascotas"+ // es Opcional
-		 "3. Buscar Mascota por propietario\n"); // Es opcional
+		 "3. Buscar Mascota por propietario\n"
+		 + "En caso de volver, presione cualquier otra tecla"); // Es opcional
 		 String choice= tc.nextLine();
 		 switch (choice) {
 			case "1":

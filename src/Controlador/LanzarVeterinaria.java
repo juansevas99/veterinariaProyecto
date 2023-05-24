@@ -44,9 +44,32 @@ public class LanzarVeterinaria {
 				break;
 
 			default:
+				comienzo();
 				break;
 			}
 			
 		}
 	}
+	
+	
+	public static void desplegarMenuVeterinario() {
+		while(true) {
+			Menus menu= new MenuRegistroDatos();
+			int opcion =menu.desplegarMenus();
+			switch (opcion) {
+			case 1:
+				CitaControlador cita = new CitaControlador();
+				cita.crearCita();
+				break;
+
+			default:
+				comienzo();
+				break;
+			}
+			
+		}
+	}
+
+
+
 }

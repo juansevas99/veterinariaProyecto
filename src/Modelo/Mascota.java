@@ -1,9 +1,11 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public abstract class  Mascota {
 	public static int identifiacion;
+	
 	int id;
 	String requisitoVacunacion;	
 	public static ArrayList<Mascota> listaMascota = new ArrayList<>();
@@ -23,10 +25,11 @@ public abstract class  Mascota {
 	protected String genero;
 	protected float altura;
 	protected float peso;
+	
 	protected Propietario propietario;
 	protected String registroVacunacion;
-	protected HistorialMedico historialMedico;
-    public int cont =0; 
+	//protected HistorialMedico historialMedico;
+
     
     //constructor en vacio
     public Mascota() {
@@ -39,7 +42,7 @@ public abstract class  Mascota {
         peso = 0;
         // esta variable es para poder interactuar con la clase propietario
         propietario = new Propietario();
-        historialMedico = new HistorialMedico();
+        //historialMedico = new HistorialMedico();
     }
     //constructor con parametros
     public Mascota(String nombre, int edad, String especie, String raza, String genero, float altura, float peso, Propietario propietario) {
@@ -128,9 +131,15 @@ public abstract class  Mascota {
         return "Mascota{" + "nombre=" + nombre + ", edad=" + edad + ", especie=" + especie + ", raza=" + raza + ", genero=" + genero + ", altura=" + altura + ", peso=" + peso + ", propietario=" + propietario + '}';
     }
 	
-	public static  Mascota encontrarPorId(int id) {
-		return null;
-	}
+    public static Mascota encontrarPorId(int  id){
+    	Optional element=listaMascota.stream().filter(e->e.id==id).findFirst();
+    	if (element.isEmpty()) {
+    		return null;
+    	}
+    	Mascota elemento=(Mascota)element.get();
+    	
+    	return elemento;
+    }
 }
 
 

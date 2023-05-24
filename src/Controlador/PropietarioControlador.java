@@ -21,6 +21,7 @@ public class PropietarioControlador {
 	public void crearPropietario() {
 		
 		HashMap<String ,Object > solicitud=registro.deplegarFormulario(); // aqui se camptan todos lo datos
-		propietario = new Propietario(solicitud.get("nombre").toString(),solicitud.get("identifiacion").toString(), solicitud.get("direccion").toString(), solicitud.get("correo").toString(), Integer.parseInt(solicitud.get("telefono").toString()) );
+		propietario = new Propietario(solicitud.get("nombre").toString(),solicitud.get("identificacion").toString(), solicitud.get("direccion").toString(), solicitud.get("correo").toString(), Integer.parseInt(solicitud.get("telefono").toString()) );
+		Propietario.listaPropietario.add(propietario);
 	}
 }
