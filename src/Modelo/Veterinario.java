@@ -26,9 +26,7 @@ public class Veterinario {
 		this.telefono = telefono;
 	}
 	
-	public static Veterinario encontrarPorId(String id) {
-		return null;
-	}
+	public static Veterinario encontrarPorId;
 	
 	
 }

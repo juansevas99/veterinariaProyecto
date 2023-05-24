@@ -12,18 +12,14 @@ public class FormularioRegistroMascota  extends Formulario{
 	}
 
 	@Override
-	public HashMap<String, Object>  deplegarFormulario() {
+	public HashMap<String, Object>  desplegarFormulario() {
 		System.out.println("MODULO REGISTRO MASCOTA");
 		
-	
-		
-		
-		
+
 		
 		System.out.println("Nombre");
 		String nombre=tc.nextLine();
 		solicitud.put("nombre", nombre);
-		
 		System.out.println("edad");
 		int edad=tc.nextInt();
 		solicitud.put("edad", edad);
@@ -35,20 +31,16 @@ public class FormularioRegistroMascota  extends Formulario{
 		System.out.println("genero");
 		String genero=tc.nextLine();
 		solicitud.put("genero", genero);
-	
-		System.out.println("raza");
-		String raza=tc.nextLine();
-		solicitud.put("raza", raza);
-		
 		
 		System.out.println("altura");
-		float altura=tc.nextFloat();
+		
+		double altura=tc.nextDouble();
 		solicitud.put("altura", altura);
 		
 		
 		System.out.println("Peso");
 		
-		float peso=tc.nextFloat();
+		double peso=tc.nextDouble();
 		solicitud.put("peso", peso);
 		
 		return solicitud;

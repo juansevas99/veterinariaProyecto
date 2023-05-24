@@ -10,27 +10,27 @@ public class FormularioRegistroPropietario extends Formulario{
 		solicitud= new HashMap<String,Object>();
 	}
 	@Override
-	public HashMap<String, Object> deplegarFormulario() {
+	public HashMap<String, Object> desplegarFormulario() {
 		System.out.println("MODULO REGISTRO PROPIETARIO");
 		System.out.println("Nombre");
 		String nombre=tc.nextLine();
 		solicitud.put("nombre", nombre);
-		System.out.println("identificacion");
+		System.out.println("Identificacion");
 		String identificacion=tc.nextLine();
 		solicitud.put("identificacion", identificacion);
 		
-		System.out.println("direccion");
+		System.out.println("Direccion");
 		String direccion=tc.nextLine();
-		solicitud.put("direccion", direccion);
+		solicitud.put("identificacion", direccion);
 		
 		System.out.println("Correo");
 		String correo=tc.nextLine();
-		solicitud.put("correo", correo);
+		solicitud.put("identificacion", correo);
 		
 		System.out.println("telefono");
 		
 		String telefono=tc.nextLine();
-		solicitud.put("telefono", telefono);
+		solicitud.put("identificacion", telefono);
 		
 		
 		return solicitud;

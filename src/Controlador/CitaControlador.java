@@ -20,11 +20,11 @@ public class CitaControlador {
 	public void crearCita() {
 		Scanner tc= new Scanner(System.in);
 		System.out.println("ALERTA: VALIDACION INICIAL DE DATOS:\n");
-		System.out.println("Indique numero de indentifiacion\n"); // es demasiado pequeño para crear una vista 
+		System.out.println("Indique numero de indentifiacion\n"); // es demasiado pequeï¿½o para crear una vista 
 		
 		String documento=tc.nextLine();
 		if (Propietario.encontrarPorId(documento)!=null) {
-			System.out.println("Indieque numero de indentifiacion de la mascota"); // es demasiado pequeño para crear una vista 
+			System.out.println("Indieque numero de indentifiacion de la mascota"); // es demasiado pequeï¿½o para crear una vista 
 			
 			int identifiacion=tc.nextInt();
 			if (Mascota.encontrarPorId(identifiacion)!=null) {
