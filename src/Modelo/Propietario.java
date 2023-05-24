@@ -3,6 +3,7 @@ package Modelo;
 
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 /**
  *
@@ -86,7 +87,13 @@ public class Propietario {
     
     
     public static Propietario encontrarPorId(String id){
-    	return ;
+    	Optional element=listaPropietario.stream().filter(e->e.identificacion.equals(id)).findFirst();
+    	if (element.isEmpty()) {
+    		return null;
+    	}
+    	Propietario elemento=(Propietario)element.get();
+    	
+    	return elemento;
     }
    
     

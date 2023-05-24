@@ -21,11 +21,13 @@ public class MascotaControlador {
 		
 		HashMap<String, Object> solicitud=registro.deplegarFormulario();
 		if (tipo==1) {
-			mascota= new Perro(null, tipo, null, null, null, tipo, tipo, Propietario.listaPropietario.get(Propietario.listaPropietario.size()-1));
+			mascota= new Perro(solicitud.get("nombre").toString(), Integer.parseInt(solicitud.get("edad").toString()), solicitud.get("especie").toString(), solicitud.get("raza").toString(), solicitud.get("genero").toString(), Float.parseFloat( solicitud.get("altura").toString()),Float.parseFloat( solicitud.get("peso").toString()), Propietario.listaPropietario.get(Propietario.listaPropietario.size()-1));
 		}
 		else {
-			mascota= new Gato(null, tipo, null, null, null, tipo, tipo, Propietario.listaPropietario.get(Propietario.listaPropietario.size()-1));
+			mascota= new Gato(solicitud.get("nombre").toString(), Integer.parseInt(solicitud.get("edad").toString()), solicitud.get("especie").toString(), solicitud.get("raza").toString(), solicitud.get("genero").toString(), Float.parseFloat( solicitud.get("altura").toString()),Float.parseFloat( solicitud.get("peso").toString()), Propietario.listaPropietario.get(Propietario.listaPropietario.size()-1));
 		}
+		
+		Mascota.listaMascota.add(mascota);
 		return Mascota.identifiacion;
 		
 	}
